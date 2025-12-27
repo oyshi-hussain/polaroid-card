@@ -1,38 +1,35 @@
-.App {
-  text-align: center;
+body {
+  background: #f5f2ee;
+  font-family: Arial, sans-serif;
+}
+.fileGap {
+  padding-bottom: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 15px;
+  padding: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.polaroid {
+  width: 260px;
+  background: white;
+  padding: 15px 15px 40px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transform: rotate(-2deg);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.polaroid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.polaroid p {
+  text-align: center;
+  margin-top: 15px;
+  font-family: cursive;
 }
