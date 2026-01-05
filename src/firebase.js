@@ -8,13 +8,12 @@ import { getFirestore } from "firebase/firestore";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAV7fm_NptO8eMEkcgfek74poAj2_oLI9I",
-  authDomain: "polaroid-card-app.firebaseapp.com",
-  projectId: "polaroid-card-app",
-  storageBucket: "polaroid-card-app.firebasestorage.app",
-  messagingSenderId: "439973740478",
-  appId: "1:439973740478:web:822142d1fe5283fb2bc3ef",
-  measurementId: "G-ZMVGCB20M7"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
 
 // Initialize Firebase
