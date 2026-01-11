@@ -1,7 +1,8 @@
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { db } from "./firebase";
 import { doc, getDoc } from "firebase/firestore";
+import frame from "./assets/Frame.png";
 
 function Card() {
 
@@ -32,14 +33,23 @@ function Card() {
     <div style={{ padding: "40px", fontFamily: "sans-serif" }}>
     <h1>Polaroid Card</h1>
 
-    <div>
+    <div className="polaroidWrap">
+      <div className="photoWindow">
       <img
         src={card.imageURL}
         alt="Polaroid"
-        style={{ width: "250px", borderRadius: "8px" }}
       />
-      <p>{card.message}</p>
+      </div>
+      <img
+      className="polaroidFrame"
+      src={frame}
+      alt="Polaroid Frame"
+      />
+      <p className="polaroidMessage">{card.message}</p>
     </div>
+    <a href="/" style={{display: "inline-block", marginTop: "20px" }}>
+    Create your own Polaroid!
+    </a>
   </div>
   );
 }

@@ -6,30 +6,47 @@ body {
   padding-bottom: 50px;
 }
 
+.polaroidWrap {
+  position: relative;
+  width: 512px;
+  margin: 0 auto;
+}
+
+.photoWindow {
+  position: absolute;
+  top: 69px; /* top of white area */
+  left: 103px; /* left of white area */
+  width: 304px; /* width of white area */
+  height: 326px; /* height of white area */
+  overflow: hidden;
+  z-index: 1;
+  /* outline: 2px dashed red; */
+}
+
+.photoWindow img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.polaroidFrame {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.polaroidMessage {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
   padding: 40px;
-}
-
-.polaroid {
-  width: 260px;
-  background: white;
-  padding: 15px 15px 40px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  transform: rotate(-2deg);
-}
-
-.polaroid img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.polaroid p {
-  text-align: center;
-  margin-top: 15px;
-  font-family: cursive;
 }

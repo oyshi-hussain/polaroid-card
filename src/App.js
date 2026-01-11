@@ -5,6 +5,7 @@ import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { collection, addDoc } from "firebase/firestore";
 import { Routes, Route } from "react-router-dom";
 import Card from './Card';
+import frame from './assets/Frame.png'
 
 
 function App() {
@@ -45,7 +46,6 @@ function App() {
       path="/"
       element={
         <div style={{ padding: "40px", fontFamily: "sans-serif" }}>
-          <h1>Polaroid Card</h1>
     <div className='container'>
       <h1>Polaroid Card</h1>
     <div>
@@ -77,14 +77,13 @@ function App() {
       <br /> <br />
 
       {imageURL && (
-        <div>
-        <img
-        src={imageURL}
-        alt="Polaroud"
-        style={{ width: "250px", borderRadius: "8px" }}
-        />
-        <p>{message}</p>
+        <div className="polaroidWrap">
+        <div className="photoWindow">
+            <img src={imageURL} alt="Polaroid" />
         </div>
+        <img className="polaroidFrame" src={frame} alt="Frame" />
+        <p className="polaroidMessage">{message}</p>
+      </div>
       )}
 
       {cardLink && (
